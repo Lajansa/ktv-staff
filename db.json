@@ -1,0 +1,91 @@
+[
+    {
+        "name": "Female Singers",
+        "singers": [
+            {
+                "name": "G.E.M",
+                "songs": [
+                    {
+                        "name": "那一夜",
+                        "url": "https://www.youtube.com/watch?v=ugVNDvnDDpA"
+                    },
+                    {
+                        "name": "倒数",
+                        "url": "https://www.youtube.com/watch?v=ma7r2HGqwXs"
+                    }
+                ]
+            },
+            {
+                "name": "Hebe Tien",
+                "songs": [
+                    {
+                        "name": "你就不要想起我",
+                        "url": "https://www.youtube.com/watch?v=GsKbnsUN2RE"
+                    },
+                    {
+                        "name": "不醉不会",
+                        "url": "https://www.youtube.com/watch?v=7gQxgKaiPzk"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Male Singers",
+        "singers": [
+            {
+                "name": "JJ Lin",
+                "songs": [
+                    {
+                        "name": "曹操",
+                        "url": "https://www.youtube.com/watch?v=3J_bkgexrE8"
+                    },
+                    {
+                        "name": "美人鱼",
+                        "url": "https://www.youtube.com/watch?v=jdf3gxFP0F8"
+                    }
+                ]
+            },
+            {
+                "name": "Jay Chou",
+                "songs": [
+                    {
+                        "name": "聽見下雨的聲音",
+                        "url": "https://www.youtube.com/watch?v=IFJjJ9zBGGQ"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Bands",
+        "singers": [
+            {
+                "name": "Maroon 5",
+                "songs": [
+                    {
+                        "name": "Animals",
+                        "url": "https://www.youtube.com/watch?v=a5-tjIB9YBk"
+                    },
+                    {
+                        "name": "She will be loved",
+                        "url": "https://www.youtube.com/watch?v=zJmVq8-p1CE"
+                    }
+                ]
+            },
+            {
+                "name": "Fallout Boy",
+                "songs": [
+                    {
+                        "name": "Dance, Dance",
+                        "url": "https://www.youtube.com/watch?v=bxxJ25-3QEA"
+                    },
+                    {
+                        "name": "Sugar, we're going down",
+                        "url": "https://www.youtube.com/watch?v=d5lOB7Ibjhg"
+                    }
+                ]
+            }
+        ]
+    }
+]
