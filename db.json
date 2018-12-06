@@ -1,9 +1,11 @@
 [
     {
         "name": "Female Singers",
+        "url": "https://producer.musicradiocreative.com/wp-content/uploads/2012/08/sung-jingle-1280x640.jpg",
         "singers": [
             {
                 "name": "G.E.M",
+                "url": "https://s.yimg.com/ny/api/res/1.2/jfygCR0gc5sR8lOPLmaCeg--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAwO2lsPXBsYW5l/http://www.cinema.com.my/images/news/2016/7cn_gemtangmostpopular00.jpg",
                 "songs": [
                     {
                         "name": "那一夜",
@@ -17,6 +19,7 @@
             },
             {
                 "name": "Hebe Tien",
+                "url": "http://i1.jpopasia.com/news/4/11734-7e1avnok3j.jpg",
                 "songs": [
                     {
                         "name": "你就不要想起我",
@@ -32,9 +35,11 @@
     },
     {
         "name": "Male Singers",
+        "url": "https://cdn.cnn.com/cnnnext/dam/assets/161225190225-02-george-michael-2007-getty-full-169.jpg",
         "singers": [
             {
                 "name": "JJ Lin",
+                "url": "https://yukikolee.files.wordpress.com/2013/03/jj-lin.jpg",
                 "songs": [
                     {
                         "name": "曹操",
@@ -48,6 +53,7 @@
             },
             {
                 "name": "Jay Chou",
+                "url": "https://tnimage.taiwannews.com.tw/photos/shares/592d383101366.jpg",
                 "songs": [
                     {
                         "name": "聽見下雨的聲音",
@@ -59,9 +65,11 @@
     },
     {
         "name": "Bands",
+        "url": "https://d3jjg4nf4bbybe.cloudfront.net/u/37312/d6381a3bad7d3387c5e0f9fdfae9a54549d933a4/original/image.jpg/!!/b%3AW1sic2NhbGUiLDk4XSxbImV4dHJhY3QiLHsibGVmdCI6MCwidG9wIjoxOCwid2lkdGgiOjc2MCwiaGVpZ2h0IjozODV9XV0%3D.jpg",
         "singers": [
             {
                 "name": "Maroon 5",
+                "url": "https://www.teksteshqip.com/img_upz/allart_full/70253.jpg",
                 "songs": [
                     {
                         "name": "Animals",
@@ -75,6 +83,7 @@
             },
             {
                 "name": "Fallout Boy",
+                "url": "http://1.bp.blogspot.com/-m4b3DVODmzM/Uktx84lt-RI/AAAAAAAAAbQ/eEddlJ396rM/s320/Fall-Out-Boy-900-6001.jpg",
                 "songs": [
                     {
                         "name": "Dance, Dance",

@@ -16,9 +16,13 @@ const SongSelectionStack = createStackNavigator({
   "Song List": SongListScreen,
 })
 
+const QueueStack = createStackNavigator({
+  "Queue": QueueScreen,
+})
+
 const TabNavigator = createBottomTabNavigator({
   "Song Selection": SongSelectionStack,
-  Queue: QueueScreen,
+  Queue: QueueStack,
 },
   {
     defaultNavigationOptions: ({ navigation }) => ({

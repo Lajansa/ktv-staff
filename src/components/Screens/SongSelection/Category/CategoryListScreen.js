@@ -6,10 +6,10 @@ import CategoryList from './categoryList.js';
 class CategoryListScreen extends Component {
     render() {
       return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <CategoryList
-          navigation={this.props.navigation}
-        />
+        <View>
+          <CategoryList
+            navigation={this.props.navigation}
+          />
         </View>
       );
     }

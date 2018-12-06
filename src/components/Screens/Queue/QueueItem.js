@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { ListItem } from 'react-native-elements';
 
 class QueueItem extends Component {
     render() {
       return (
-        <View>
-          <Text>{this.props.name} <Icon name='bars' /></Text>
-        </View>
+        <ListItem
+          key={this.props.name}
+          containerStyle={{paddingLeft: 10, borderBottomColor: '#ddd'}}
+          title={this.props.name}
+          rightIcon={{name: 'menu'}}
+        />
       )
     }
   }
 
   export default QueueItem;
+
+  

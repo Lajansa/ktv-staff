@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { List } from 'react-native-elements'
 
 import db from '../../../../../db.json';
 import SongItem from './songItem';
@@ -19,9 +19,10 @@ class SongList extends Component {
                                 );
                             
         return (
-            <View>
+            <List 
+                containerStyle={{borderTopColor: '#fff', marginTop: 0}}>
                 {listItems}
-            </View>
+            </List>
         )
     }
 }

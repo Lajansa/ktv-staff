@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import QueueItem from './queueItem';
-import { Text, View } from 'react-native';
 import { connect } from 'react-redux';
+import { List, Text } from 'react-native-elements'
+
+import QueueItem from './queueItem';
 
 class QueueList extends Component {
     render() {
@@ -15,9 +16,10 @@ class QueueList extends Component {
                                 );
                             
         return (
-            <View>
+            <List 
+                containerStyle={{borderTopColor: '#fff', marginTop: 0}}>
                 {listItems}
-            </View>
+            </List>
         )
     }
 }

@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import { Button, View } from 'react-native';
+import { ListItem } from 'react-native-elements';
+
+import db from '../../../../../db.json';
 
 class SingerItem extends Component {
     render() {
-      
       return (
-        <View>
-          <Button
-            key={this.props.singerID}
-            title={this.props.name}
-            onPress={() => this.props.navigation.navigate('Song List', {categoryID: this.props.categoryID, singerID: this.props.singerID} )}
-          />
-        </View>
+        <ListItem
+          key={this.props.singerID}
+          avatar={{uri: db[this.props.categoryID].singers[this.props.singerID].url}}
+          containerStyle={{paddingLeft: 10, borderBottomColor: '#ddd'}}
+          title={this.props.name}
+          onPress={() => this.props.navigation.navigate('Song List', {categoryID: this.props.categoryID, singerID: this.props.singerID} )}
+        />
       )
     }
   }

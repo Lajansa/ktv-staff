@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import { connect } from 'react-redux'
+import { ListItem } from 'react-native-elements';
+import { connect } from 'react-redux';
 
 import db from '../../../../../db.json';
 
@@ -9,13 +8,13 @@ class SongItem extends Component {
     render() {
       const song = db[this.props.categoryID].singers[this.props.singerID].songs[this.props.songID];
       return (
-        <View key={this.props.index}>
-          <Text>{this.props.name} <Icon 
-                                    name='plus'
-                                    onPress={() => this.props.addSong(song)}
-                                  />
-          </Text>
-        </View>
+        <ListItem
+          key={this.props.index}
+          containerStyle={{paddingLeft: 10, borderBottomColor: '#ddd'}}
+          title={this.props.name}
+          rightIcon={{name: 'add'}}
+          onPressRightIcon={() => this.props.addSong(song)}
+        />
       )
     }
   }

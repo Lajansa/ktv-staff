@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { List } from 'react-native-elements'
 
 import db from '../../../../../db.json';
 import CategoryItem from './categoryItem';
@@ -16,9 +16,10 @@ class CategoryList extends Component {
                                 );
       
       return (
-        <View>
-          {listItems}
-        </View>
+        <List 
+            containerStyle={{borderTopColor: '#fff', marginTop: 0}}>
+            {listItems}
+        </List>
       )
     }
   }

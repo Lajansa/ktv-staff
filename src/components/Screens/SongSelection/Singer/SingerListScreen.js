@@ -6,7 +6,7 @@ import SingerList from './singerList';
 class SingerListScreen extends Component {
     render() {
       return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <View>
         <SingerList
           navigation={this.props.navigation}
         />
