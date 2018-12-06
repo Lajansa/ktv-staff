@@ -1,28 +1,27 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { connect } from 'react-redux'
 
 import db from '../../../../../db.json';
 
 class SongItem extends Component {
     render() {
-      const { categoryID, singerID } = this.props.navigation.state.params;
-      const listItems = db[categoryID].singers[singerID].songs.map((item, index) => 
-                                  <View key={index}>
-                                    <Text>{item.name} <Icon 
-                                                        name='plus'
-                                                        onPress={() => addSongToQueue(db[categoryID].singers[singerID].songs[index])}
-                                                      />
-                                    </Text>
-                                  </View>
-                                );
-      
+      const song = db[this.props.categoryID].singers[this.props.singerID].songs[this.props.songID];
       return (
-        <View>
-          {listItems}
+        <View key={this.props.index}>
+          <Text>{this.props.name} <Icon 
+                                    name='plus'
+                                    onPress={() => this.props.addSong(song)}
+                                  />
+          </Text>
         </View>
       )
     }
   }
 
-  export default SongItem;
+const mapDispatchToProps = dispatch => ({
+    addSong: (song) => dispatch({ type: 'ADD_SONG', songName: song.name }),
+})
+
+export default connect(null, mapDispatchToProps)(SongItem);

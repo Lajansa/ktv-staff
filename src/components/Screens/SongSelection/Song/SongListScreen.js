@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 
-import SongItem from './SongItem';
+import SongList from './songList';
 
 class SongListScreen extends Component {
     render() {
       return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <SongItem
+          <SongList
             navigation={this.props.navigation}
           />
         </View>

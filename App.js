@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { createBottomTabNavigator, createStackNavigator, createAppContainer } from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 
-import QueueScreen from './src/components/Screens/Queue/QueueScreen';
-import CategoryListScreen from './src/components/Screens/SongSelection/Category/CategoryListScreen';
-import SingerListScreen from './src/components/Screens/SongSelection/Singer/SingerListScreen';
-import SongListScreen from './src/components/Screens/SongSelection/Song/SongListScreen';
+import QueueScreen from './src/components/screens/queue/queueScreen';
+import CategoryListScreen from './src/components/screens/songSelection/category/categoryListScreen';
+import SingerListScreen from './src/components/screens/songSelection/singer/singerListScreen';
+import SongListScreen from './src/components/screens/songSelection/song/songListScreen';
 
 
 const SongSelectionStack = createStackNavigator({
@@ -35,4 +37,30 @@ const TabNavigator = createBottomTabNavigator({
   }
 );
 
-export default createAppContainer(TabNavigator);
+const AppContainer = createAppContainer(TabNavigator);
+
+const initialState = {
+  queueList: []
+}
+
+const reducer = (state = initialState, action) => {
+  switch(action.type) {
+    case 'ADD_SONG':
+      return { queueList: [...state.queueList, { name: action.songName }] };
+  }
+  return state;
+}
+
+const store = createStore(reducer);
+
+class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <AppContainer />
+      </Provider>
+    )
+  }
+}
+
+export default App;
