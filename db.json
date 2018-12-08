@@ -9,11 +9,11 @@
                 "songs": [
                     {
                         "name": "那一夜",
-                        "url": "https://www.youtube.com/watch?v=ugVNDvnDDpA"
+                        "videoId": "ugVNDvnDDpA"
                     },
                     {
                         "name": "倒数",
-                        "url": "https://www.youtube.com/watch?v=ma7r2HGqwXs"
+                        "videoId": "ma7r2HGqwXs"
                     }
                 ]
             },
@@ -23,11 +23,11 @@
                 "songs": [
                     {
                         "name": "你就不要想起我",
-                        "url": "https://www.youtube.com/watch?v=GsKbnsUN2RE"
+                        "videoId": "GsKbnsUN2RE"
                     },
                     {
                         "name": "不醉不会",
-                        "url": "https://www.youtube.com/watch?v=7gQxgKaiPzk"
+                        "videoId": "7gQxgKaiPzk"
                     }
                 ]
             }
@@ -43,11 +43,11 @@
                 "songs": [
                     {
                         "name": "曹操",
-                        "url": "https://www.youtube.com/watch?v=3J_bkgexrE8"
+                        "videoId": "3J_bkgexrE8"
                     },
                     {
                         "name": "美人鱼",
-                        "url": "https://www.youtube.com/watch?v=jdf3gxFP0F8"
+                        "videoId": "jdf3gxFP0F8"
                     }
                 ]
             },
@@ -57,7 +57,7 @@
                 "songs": [
                     {
                         "name": "聽見下雨的聲音",
-                        "url": "https://www.youtube.com/watch?v=IFJjJ9zBGGQ"
+                        "videoId": "IFJjJ9zBGGQ"
                     }
                 ]
             }
@@ -73,11 +73,11 @@
                 "songs": [
                     {
                         "name": "Animals",
-                        "url": "https://www.youtube.com/watch?v=a5-tjIB9YBk"
+                        "videoId": "a5-tjIB9YBk"
                     },
                     {
                         "name": "She will be loved",
-                        "url": "https://www.youtube.com/watch?v=zJmVq8-p1CE"
+                        "videoId": "zJmVq8-p1CE"
                     }
                 ]
             },
@@ -87,11 +87,11 @@
                 "songs": [
                     {
                         "name": "Dance, Dance",
-                        "url": "https://www.youtube.com/watch?v=bxxJ25-3QEA"
+                        "videoId": "bxxJ25-3QEA"
                     },
                     {
                         "name": "Sugar, we're going down",
-                        "url": "https://www.youtube.com/watch?v=d5lOB7Ibjhg"
+                        "videoId": "d5lOB7Ibjhg"
                     }
                 ]
             }

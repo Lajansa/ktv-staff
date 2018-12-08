@@ -31,7 +31,7 @@ class SongItem extends Component {
   }
 
 const mapDispatchToProps = dispatch => ({
-    addSong: (song) => dispatch({ type: 'ADD_SONG', songName: song.name }),
+    addSong: (song) => dispatch({ type: 'ADD_SONG', songName: song.name, videoId: song.videoId }),
 })
 
 export default connect(null, mapDispatchToProps)(SongItem);

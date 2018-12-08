@@ -51,7 +51,7 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch(action.type) {
     case 'ADD_SONG':
-      return { queueList: [...state.queueList, { name: action.songName }] };
+      return { queueList: [...state.queueList, { name: action.songName, videoId: action.videoId }] };
   }
   return state;
 }
