@@ -45,13 +45,22 @@ const TabNavigator = createBottomTabNavigator({
 const AppContainer = createAppContainer(TabNavigator);
 
 const initialState = {
-  queueList: []
+  queueList: [],
+  currentPlayingSong: null,
 }
 
 const reducer = (state = initialState, action) => {
   switch(action.type) {
     case 'ADD_SONG':
-      return { queueList: [...state.queueList, { name: action.songName, videoId: action.videoId }] };
+      return { 
+        queueList: [...state.queueList, { name: action.songName, videoId: action.videoId }],
+        currentPlayingSong: state.currentPlayingSong == null ? { name: action.songName, videoId: action.videoId } : state.currentPlayingSong,
+      }
+    case 'PLAY_NEXT_SONG':
+      return {
+        queueList: state.queueList.slice(1),
+        currentPlayingSong: state.queueList.slice(1).length == 0 ? null : state.queueList[1]
+      }
   }
   return state;
 }
