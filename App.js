@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
+import VideoContainer from './VideoContainer';
 import QueueScreen from './src/components/screens/queue/queueScreen';
 import CategoryListScreen from './src/components/screens/songSelection/category/categoryListScreen';
 import SingerListScreen from './src/components/screens/songSelection/singer/singerListScreen';
@@ -61,6 +62,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
+        <VideoContainer />
         <AppContainer />
       </Provider>
     )
