@@ -11,7 +11,7 @@ class SingerItem extends Component {
           avatar={{uri: db[this.props.categoryID].singers[this.props.singerID].url}}
           containerStyle={{paddingLeft: 10, borderBottomColor: '#ddd'}}
           title={this.props.name}
-          onPress={() => this.props.navigation.navigate('Song List', {categoryID: this.props.categoryID, singerID: this.props.singerID} )}
+          onPress={() => this.props.navigation.navigate('Song List', {categoryID: this.props.categoryID, singerID: this.props.singerID, title: db[this.props.categoryID].singers[this.props.singerID].name} )}
         />
       )
     }

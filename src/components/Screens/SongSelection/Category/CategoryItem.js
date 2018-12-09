@@ -11,7 +11,7 @@ class CategoryItem extends Component {
         containerStyle={{paddingLeft: 10, borderBottomColor: '#ddd'}}
         key={this.props.name}
         title={this.props.name}
-        onPress={() => this.props.navigation.navigate('Singer List', { categoryID: this.props.categoryID })}
+        onPress={() => this.props.navigation.navigate('Singer List', { categoryID: this.props.categoryID, title: db[this.props.categoryID].name })}
       />
     )
   }

@@ -4,15 +4,19 @@ import { View } from 'react-native';
 import CategoryList from './categoryList.js';
 
 class CategoryListScreen extends Component {
-    render() {
-      return (
-        <View>
-          <CategoryList
-            navigation={this.props.navigation}
-          />
-        </View>
-      );
-    }
-  }
+  static navigationOptions = {
+    title: 'Categories',
+  };
 
-  export default CategoryListScreen;
+  render() {
+    return (
+      <View>
+        <CategoryList
+          navigation={this.props.navigation}
+        />
+      </View>
+    );
+  }
+}
+
+export default CategoryListScreen;

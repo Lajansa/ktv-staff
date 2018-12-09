@@ -13,7 +13,7 @@ class VideoContainer extends Component {
 
     render() {
         const playVideo = this.props.currentPlayingSong == null ?
-                        <Text>Add songs from Song Selection Tab(:</Text> :
+                        <Text style={{ textAlign: 'center', lineHeight: 300, height: 300 }}>Add songs from Song Selection Tab(:</Text> :
                         <YouTube
                             apiKey="AIzaSyB1skQ8mlbsEcPMmuFVGKV8Q64x6fTEsnk"
                             videoId={this.props.currentPlayingSong.videoId}

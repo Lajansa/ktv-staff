@@ -13,7 +13,7 @@ class QueueItem extends Component {
                 subtitle={'Now playing'}
                 subtitleStyle={{fontStyle: 'italic', fontSize: 12}}
                 leftIcon={{name: 'play-arrow'}}
-                rightIcon={{name: 'menu'}}
+                hideChevron={true}
               />
       } else {
         item = <ListItem
@@ -21,6 +21,9 @@ class QueueItem extends Component {
                 containerStyle={{paddingLeft: 10, borderBottomColor: '#ddd'}}
                 title={this.props.name}
                 rightIcon={{name: 'menu'}}
+                onPressRightIcon={() => {
+                  
+                }}
               />
       }
 

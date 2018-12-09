@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { createBottomTabNavigator, createStackNavigator, createAppContainer } from 'react-navigation';
+import { createBottomTabNavigator, createStackNavigator, createAppContainer, Header } from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
@@ -11,11 +11,20 @@ import SingerListScreen from './src/components/screens/songSelection/singer/sing
 import SongListScreen from './src/components/screens/songSelection/song/songListScreen';
 
 
-const SongSelectionStack = createStackNavigator({
-  "Category List": CategoryListScreen,
-  "Singer List": SingerListScreen,
-  "Song List": SongListScreen,
-})
+const SongSelectionStack = createStackNavigator(
+  {
+    "Category List": CategoryListScreen,
+    "Singer List": SingerListScreen,
+    "Song List": SongListScreen,
+  },
+  {
+    defaultNavigationOptions: {
+      headerStyle: {
+        // marginTop: Header.height / 2,
+      }
+    }
+  }
+)
 
 const QueueStack = createStackNavigator({
   "Queue": QueueScreen,

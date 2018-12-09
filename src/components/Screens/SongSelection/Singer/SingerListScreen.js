@@ -4,15 +4,19 @@ import { View } from 'react-native';
 import SingerList from './singerList';
 
 class SingerListScreen extends Component {
-    render() {
-      return (
-        <View>
+  static navigationOptions = ({ navigation }) => ({
+    title: `${navigation.state.params.title}`,
+  });
+
+  render() {
+    return (
+      <View>
         <SingerList
           navigation={this.props.navigation}
         />
-        </View>
-      );
-    }
+      </View>
+    );
   }
+}
 
 export default SingerListScreen;

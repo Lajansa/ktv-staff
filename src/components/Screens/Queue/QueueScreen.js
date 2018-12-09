@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 
 import QueueList from './queueList.js';
 
 class QueueScreen extends Component {
-    render() {
-      return (
-        <View>
-          <QueueList />
-        </View>
-      );
-    }
-  }
+  static navigationOptions = {
+    title: 'Queue',
+  };
 
-  export default QueueScreen;
+  render() {
+    return (
+      <ScrollView>
+        <QueueList />
+      </ScrollView>
+    );
+  }
+}
+
+export default QueueScreen;
