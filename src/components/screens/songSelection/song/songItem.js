@@ -12,6 +12,15 @@ class SongItem extends Component {
       }
     }
     
+    // componentDidUpdate(prevProps) {
+    //   const song = db[this.props.categoryID].singers[this.props.singerID].songs[this.props.songID];
+    //   if (this.props.previousPlayingSong != null && this.props.previousPlayingSong.videoId === song.videoId) {
+    //     if (prevProps.selected){
+    //       this.setState({selected: false});
+    //     }
+    //   }
+    // }
+
     render() {
       const song = db[this.props.categoryID].singers[this.props.singerID].songs[this.props.songID];
       const iconName = this.state.selected ? 'check' : 'add';
@@ -30,8 +39,13 @@ class SongItem extends Component {
     }
   }
 
+const mapStateToProps = (state) => ({
+    previousPlayingSong: state.previousPlayingSong
+})
+
+
 const mapDispatchToProps = dispatch => ({
     addSong: (song) => dispatch({ type: 'ADD_SONG', songName: song.name, videoId: song.videoId }),
 })
 
-export default connect(null, mapDispatchToProps)(SongItem);
+export default connect(mapStateToProps, mapDispatchToProps)(SongItem);

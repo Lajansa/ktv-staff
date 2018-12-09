@@ -46,6 +46,7 @@ const AppContainer = createAppContainer(TabNavigator);
 
 const initialState = {
   queueList: [],
+  previousPlayingSong: null,
   currentPlayingSong: null,
 }
 
@@ -59,7 +60,8 @@ const reducer = (state = initialState, action) => {
     case 'PLAY_NEXT_SONG':
       return {
         queueList: state.queueList.slice(1),
-        currentPlayingSong: state.queueList.slice(1).length == 0 ? null : state.queueList[1]
+        previousPlayingSong: state.currentPlayingSong,
+        currentPlayingSong: state.queueList.slice(1).length === 0 ? null : state.queueList[1]
       }
   }
   return state;
