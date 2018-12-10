@@ -7,7 +7,7 @@ import QueueItem from './queueItem';
 class QueueList extends Component {
     render() {
         const listItems = this.props.queueList.length == 0 ? 
-                          <Text style={{ textAlign: 'center', lineHeight: 300, height: 300 }}>No songs yet!</Text> :
+                          <Text style={{ textAlign: 'center', lineHeight: 250, height: 250 }}>No songs yet!</Text> :
                             this.props.queueList.map((song, index) => 
                                     <QueueItem
                                         key={index}

@@ -55,8 +55,24 @@ const AppContainer = createAppContainer(TabNavigator);
 
 const initialState = {
   queueList: [],
-  previousPlayingSong: null,
+  // previousPlayingSong: null,
   currentPlayingSong: null,
+}
+
+const shuffle = (array) => {
+  var currentIndex = array.length
+  var tempValue;
+  var randomIndex;
+
+  while (currentIndex !== 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    tempValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = tempValue;
+  }
+  return array;
 }
 
 const reducer = (state = initialState, action) => {
@@ -64,13 +80,20 @@ const reducer = (state = initialState, action) => {
     case 'ADD_SONG':
       return { 
         queueList: [...state.queueList, { name: action.songName, videoId: action.videoId }],
+        // previousPlayingSong: state.currentPlayingSong,
         currentPlayingSong: state.currentPlayingSong == null ? { name: action.songName, videoId: action.videoId } : state.currentPlayingSong,
       }
     case 'PLAY_NEXT_SONG':
       return {
         queueList: state.queueList.slice(1),
-        previousPlayingSong: state.currentPlayingSong,
+        // previousPlayingSong: state.currentPlayingSong,
         currentPlayingSong: state.queueList.slice(1).length === 0 ? null : state.queueList[1]
+      }
+      case 'SHUFFLE':
+      return {
+        queueList: state.queueList.length < 3 ? state.queueList : [state.queueList[0]].concat(shuffle(state.queueList.slice(1))),
+        // previousPlayingSong: state.currentPlayingSong,
+        currentPlayingSong: state.currentPlayingSong
       }
   }
   return state;
