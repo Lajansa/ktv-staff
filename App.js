@@ -20,15 +20,24 @@ const SongSelectionStack = createStackNavigator(
   {
     defaultNavigationOptions: {
       headerStyle: {
-        // marginTop: Header.height / 2,
+        marginTop: -(Header.HEIGHT / 2),
       }
     }
   }
 )
 
-const QueueStack = createStackNavigator({
-  "Queue": QueueScreen,
-})
+const QueueStack = createStackNavigator(
+  {
+    "Queue": QueueScreen,
+  },
+  {
+    defaultNavigationOptions: {
+      headerStyle: {
+        marginTop: -(Header.HEIGHT / 2),
+      }
+    }
+  }
+)
 
 const TabNavigator = createBottomTabNavigator({
   "Song Selection": SongSelectionStack,

@@ -16,6 +16,7 @@ class VideoContainer extends Component {
                         <Text style={{ textAlign: 'center', lineHeight: 300, height: 300 }}>Add songs from Song Selection Tab(:</Text> :
                         <YouTube
                             apiKey="AIzaSyB1skQ8mlbsEcPMmuFVGKV8Q64x6fTEsnk"
+                            origin="http://www.youtube.com"
                             videoId={this.props.currentPlayingSong.videoId}
                             fullscreen={false}
                             play={true} //auto-play
