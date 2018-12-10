@@ -3,6 +3,8 @@ import { View, Text } from 'react-native';
 import { connect } from 'react-redux';
 import YouTube from 'react-native-youtube';
 
+import credentials from './.credentials.json';
+
 class VideoContainer extends Component {
     constructor(props) {
         super(props);
@@ -15,7 +17,7 @@ class VideoContainer extends Component {
         const playVideo = this.props.currentPlayingSong == null ?
                         <Text style={{ textAlign: 'center', lineHeight: 300, height: 300 }}>Add songs from Song Selection Tab(:</Text> :
                         <YouTube
-                            apiKey="AIzaSyB1skQ8mlbsEcPMmuFVGKV8Q64x6fTEsnk"
+                            apiKey={credentials.apiKey}
                             origin="http://www.youtube.com"
                             videoId={this.props.currentPlayingSong.videoId}
                             fullscreen={false}
