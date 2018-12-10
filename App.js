@@ -76,9 +76,9 @@ const shuffle = (array) => {
 }
 
 const reducer = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'ADD_SONG':
-      return { 
+      return {
         queueList: [...state.queueList, { name: action.songName, videoId: action.videoId }],
         // previousPlayingSong: state.currentPlayingSong,
         currentPlayingSong: state.currentPlayingSong == null ? { name: action.songName, videoId: action.videoId } : state.currentPlayingSong,
@@ -89,7 +89,7 @@ const reducer = (state = initialState, action) => {
         // previousPlayingSong: state.currentPlayingSong,
         currentPlayingSong: state.queueList.slice(1).length === 0 ? null : state.queueList[1]
       }
-      case 'SHUFFLE':
+    case 'SHUFFLE':
       return {
         queueList: state.queueList.length < 3 ? state.queueList : [state.queueList[0]].concat(shuffle(state.queueList.slice(1))),
         // previousPlayingSong: state.currentPlayingSong,
