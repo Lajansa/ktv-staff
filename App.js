@@ -75,13 +75,20 @@ const shuffle = (array) => {
   return array;
 }
 
-const prioritise = (array, queueIndex) => {
+const prioritiseSong = (array, queueIndex) => {
   const numIndex = parseInt(queueIndex)
   return [array[0],
-          array[numIndex],
-          ...array.slice(1, numIndex),
+  array[numIndex],
+        ...array.slice(1, numIndex),
+        ...array.slice(numIndex + 1)
+       ];
+}
+
+const deleteSong = (array, queueIndex) => {
+  const numIndex = parseInt(queueIndex)
+  return [...array.slice(0, numIndex),
           ...array.slice(numIndex + 1)
-          ];
+         ];
 }
 
 const reducer = (state = initialState, action) => {
@@ -106,7 +113,13 @@ const reducer = (state = initialState, action) => {
       }
     case 'PRIORITISE':
       return {
-        queueList: prioritise(state.queueList, action.queueIndex),
+        queueList: prioritiseSong(state.queueList, action.queueIndex),
+        // previousPlayingSong: state.currentPlayingSong,
+        currentPlayingSong: state.currentPlayingSong
+      }
+    case 'DELETE':
+      return {
+        queueList: deleteSong(state.queueList, action.queueIndex),
         // previousPlayingSong: state.currentPlayingSong,
         currentPlayingSong: state.currentPlayingSong
       }

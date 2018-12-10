@@ -11,13 +11,13 @@ class RightActions extends Component {
           <Icon
             name='arrow-upward'
             onPress={() => {
-                this.props.prioritise(this.props.queueIndex);
+                this.props.prioritiseSong(this.props.queueIndex);
             }}
           />
           <Icon
             name='delete'
             onPress={() => {
-                
+                this.props.deleteSong(this.props.queueIndex);
             }}
           />
           <Icon
@@ -32,7 +32,8 @@ class RightActions extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-    prioritise: (queueIndex) => dispatch({ type: 'PRIORITISE', queueIndex: queueIndex}),
+    prioritiseSong: (queueIndex) => dispatch({ type: 'PRIORITISE', queueIndex: queueIndex}),
+    deleteSong: (queueIndex) => dispatch({ type: 'DELETE', queueIndex: queueIndex}),
 })
 
 export default connect(null, mapDispatchToProps)(RightActions);
