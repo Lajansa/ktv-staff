@@ -75,6 +75,15 @@ const shuffle = (array) => {
   return array;
 }
 
+const prioritise = (array, queueIndex) => {
+  const numIndex = parseInt(queueIndex)
+  return [array[0],
+          array[numIndex],
+          ...array.slice(1, numIndex),
+          ...array.slice(numIndex + 1)
+          ];
+}
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_SONG':
@@ -92,6 +101,12 @@ const reducer = (state = initialState, action) => {
     case 'SHUFFLE':
       return {
         queueList: state.queueList.length < 3 ? state.queueList : [state.queueList[0]].concat(shuffle(state.queueList.slice(1))),
+        // previousPlayingSong: state.currentPlayingSong,
+        currentPlayingSong: state.currentPlayingSong
+      }
+    case 'PRIORITISE':
+      return {
+        queueList: prioritise(state.queueList, action.queueIndex),
         // previousPlayingSong: state.currentPlayingSong,
         currentPlayingSong: state.currentPlayingSong
       }

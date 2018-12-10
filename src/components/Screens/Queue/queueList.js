@@ -12,7 +12,7 @@ class QueueList extends Component {
                                     <QueueItem
                                         key={index}
                                         name={song.name}
-                                        index={index}
+                                        queueIndex={index}
                                     />
                                 );
                             
