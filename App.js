@@ -3,6 +3,7 @@ import { createBottomTabNavigator, createStackNavigator, createAppContainer, Hea
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import { Platform } from 'react-native';
 
 import VideoContainer from './VideoContainer';
 import QueueScreen from './src/components/screens/queue/queueScreen';
@@ -20,7 +21,7 @@ const SongSelectionStack = createStackNavigator(
   {
     defaultNavigationOptions: {
       headerStyle: {
-        marginTop: -(Header.HEIGHT / 2),
+        marginTop: Platform.OS === "android" ? 0 : -(Header.HEIGHT / 2),
       }
     }
   }
@@ -33,7 +34,7 @@ const QueueStack = createStackNavigator(
   {
     defaultNavigationOptions: {
       headerStyle: {
-        marginTop: -(Header.HEIGHT / 2),
+        marginTop: Platform.OS === "android" ? 0 : -(Header.HEIGHT / 2),
       }
     }
   }
@@ -122,15 +123,15 @@ const reducer = (state = initialState, action) => {
       }
     case 'PRIORITISE':
       return {
+        ...state,
         queueList: prioritiseSong(state.queueList, action.queueIndex),
         // previousPlayingSong: state.currentPlayingSong,
-        currentPlayingSong: state.currentPlayingSong
       }
     case 'DELETE':
       return {
+        ...state,
         queueList: deleteSong(state.queueList, action.queueIndex),
         // previousPlayingSong: state.currentPlayingSong,
-        currentPlayingSong: state.currentPlayingSong
       }
   }
   return state;
